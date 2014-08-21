@@ -91,7 +91,11 @@ install: build
 	done
 
 	mkdir -p $(CURDIR)/debian/mongodb-org-unstable-server/etc
-	cp $(CURDIR)/debian/mongod.conf $(CURDIR)/debian/mongodb-org-unstable-server/etc/mongod.conf 
+	cp $(CURDIR)/debian/mongodb.conf $(CURDIR)/debian/mongodb-org-unstable-server/etc/mongodb.conf 
+	mkdir -p $(CURDIR)/debian/mongodb-org-unstable-server/etc/init
+	cp $(CURDIR)/debian/init-mongodb.conf $(CURDIR)/debian/mongodb-org-unstable-server/etc/init/mongodb.conf 
+	mkdir -p $(CURDIR)/debian/mongodb-org-unstable-server/etc/init.d
+	ln -s /lib/init/upstart-job $(CURDIR)/debian/mongodb-org-unstable-server/etc/init.d/mongodb
 
 	mkdir -p $(CURDIR)/debian/mongodb-org-unstable-shell/usr/share/lintian/overrides/
 	mkdir -p $(CURDIR)/debian/mongodb-org-unstable-server/usr/share/lintian/overrides/

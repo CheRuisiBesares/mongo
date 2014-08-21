@@ -1,0 +1,9 @@
+Run build-deb.sh to build a trivial debian package repository with mongodb-org-unstable.
+
+Then, expose the repo with a webserver.
+
+Finally, add something like this to /etc/apt/sources.list:
+
+deb http://your.webserver.com/mongodb-repo binary/
+
+You should then be able to do apt-get update; apt-get install mongodb-org-unstable.
