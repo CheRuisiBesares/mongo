@@ -8,7 +8,7 @@ fi
 ln -s mongodb-org-unstable.control debian/control
 ln -s mongodb-org-unstable.rules debian/rules
 ln -s mongodb-org-unstable-server.postinst debian/postinst
-scons --64 --release --no-glibc-check -j 2 --prefix=$(pwd)/BINARIES/usr install
+scons -j 4 --64 --ssl all --release --no-glibc-check --prefix=$(pwd)/BINARIES/usr install
 debuild -i -uc -us -b
 mkdir -p $REPOSITORY/binary
 mv ../mongodb-org-unstable*.deb $REPOSITORY/binary

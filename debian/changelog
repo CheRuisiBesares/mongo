@@ -1,6 +1,12 @@
+mongodb-org-unstable (2.6.4-nsone) unstable; urgency=low
+
+  * see https://phab.nsone.co/T440
+
+ -- Kris Beevers <kbeevers@nsone.net>  Fri, 22 Aug 2014 09:01:46 -0500
+
 mongodb-org-unstable (2.5.4-nsone) unstable; urgency=low
 
-  * see https://phab.nsone.net/T266
+  * see https://phab.nsone.co/T266
 
  -- Kris Beevers <kbeevers@nsone.net>  Mon, 3 Mar 2014 23:06:46 -0500
 
